@@ -84,3 +84,9 @@
             netstat -plnt
           register: app_status
         - debug: msg={{app_status.stdout_lines}}
+
+        - name: Enable 8081 port on firewall
+          firewalld:
+            port: 8081/tcp
+            permanent: true
+            state: enabled
