@@ -16,7 +16,7 @@ Automated deployment of Sonatype Nexus Repository Manager using Ansible. This pl
 ## Prerequisites
 
 - **Control Machine**: Ansible 2.9+
-- **Target Host**: Ubuntu/Debian (tested on 20.04/22.04)
+- **Target Host**: Ubuntu/Debian/RedHat/CentOS (tested on 20.04/22.04)
 - **Permissions**: SSH access with sudo privileges to target host
 
 ## Usage
@@ -33,7 +33,7 @@ Edit inventory.ini:
 192.168.1.100  # Replace with your server IP
 
 [nexus_server:vars]
-ansible_user=ubuntu
+ansible_user=root
 ansible_ssh_private_key_file=~/.ssh/your_key.pem
 ```
 ### 3. Run Playbook
